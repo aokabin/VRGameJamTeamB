@@ -5,10 +5,11 @@ public class DebugPlayerController : MonoBehaviour {
 
 	public float power = 1.0f;
 	public float score = 1.0f;
+	public GameObject bullet;
 
 	// Use this for initialization
 	void Start () {
-		
+
 	}
 	
 	// Update is called once per frame
@@ -24,6 +25,9 @@ public class DebugPlayerController : MonoBehaviour {
 		}
 		if (Input.GetKey ("left")) {
 			transform.position += transform.right * -0.1f;
+		}
+		if (Input.GetKey (KeyCode.O)) {
+			Instantiate(bullet, this.transform.position, this.transform.rotation);
 		}
 
 	}
