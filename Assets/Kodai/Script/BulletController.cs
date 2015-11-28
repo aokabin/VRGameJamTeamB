@@ -7,7 +7,7 @@ public class BulletController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		bullet_speed = 1.0f;
+		//bullet_speed = 1.0f;
 	}
 	
 	// Update is called once per frame
