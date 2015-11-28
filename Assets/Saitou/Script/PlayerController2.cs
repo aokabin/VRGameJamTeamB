@@ -35,6 +35,7 @@ public class PlayerController2 : MonoBehaviour
                     ShotTimeCount = 0;
                     //弾の生成
                     CreatObject = (GameObject)Instantiate(Bullet, this.transform.position, this.transform.rotation);
+                    CreatObject.transform.Rotate(90,0,0);
                 }
             }
         }
