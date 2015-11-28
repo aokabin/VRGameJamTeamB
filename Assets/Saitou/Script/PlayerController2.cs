@@ -12,6 +12,8 @@ public class PlayerController2 : MonoBehaviour
     private int ShotTimeCount = 0;//弾の打つ間隔を数える
 
     #endregion
+    public float power = 1.0f;
+    public float score = 1.0f;
     // Use this for initialization
 	void Start () {
 	
@@ -47,5 +49,17 @@ public class PlayerController2 : MonoBehaviour
         vec3.y -= PlayerFallSpeed;
         this.transform.localPosition = vec3;
         #endregion
+    }
+
+    public void PowerUP()
+    {
+        Debug.Log("Power UP!!");
+        power *= 2.0f;
+    }
+
+    public void ScoreUP()
+    {
+        Debug.Log("Score UP!!");
+        score *= 1.1f;
     }
 }

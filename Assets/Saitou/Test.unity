@@ -167,7 +167,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 134050202}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -.707106948, y: 5.68434189e-14, z: 5.68434189e-14, w: -.70710659}
   m_LocalPosition: {x: -5.77464676, y: 316.100006, z: -3.2637291}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -186,9 +186,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83f974276cc834642b3d10543c45a45e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerFallSpeed: 1
+  PlayerFallSpeed: 0
   ShotTime: 60
   Bullet: {fileID: 2122592045}
+  power: 1
+  score: 1
 --- !u!1 &135647149
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,9 +688,10 @@ GameObject:
   - 33: {fileID: 2122592048}
   - 65: {fileID: 2122592047}
   - 23: {fileID: 2122592046}
+  - 114: {fileID: 2122592050}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -750,6 +753,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &2122592050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2122592045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd9899de18a66456b85a7c380abb02a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet_speed: 20
 --- !u!1 &2145119417
 GameObject:
   m_ObjectHideFlags: 0
