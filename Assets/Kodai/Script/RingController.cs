@@ -19,7 +19,7 @@ public class RingController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 //		rotateZ = 0.1f;
-//		this.transform.Rotate (new Vector3 (0, 0, rotateZ));
+		this.transform.Rotate (new Vector3 (0, 0, rotateZ));
 	}
 
 	void OnTriggerEnter(Collider collider) {
