@@ -59,9 +59,6 @@ public class EnemyController : MonoBehaviour {
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.CompareTag("Bullet"))
-        {
-            //EnemyHP--;
-            print("Hit Enemy");
-        }
+            EnemyHP--;
     }
 }
