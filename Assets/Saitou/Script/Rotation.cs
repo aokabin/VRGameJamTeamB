@@ -17,7 +17,9 @@ public class Rotation : MonoBehaviour {
         {
             Vector3 MoveInput = GetInput();
             /***カメラの方向取得***/
-            Target.transform.Rotate(MoveInput.normalized);
+//            Target.transform.Rotate(MoveInput.normalized);
+//			this.transform.rotation = MoveInput;
+			this.transform.Rotate(MoveInput.normalized);
         }
 	}
 
@@ -26,8 +28,9 @@ public class Rotation : MonoBehaviour {
         Vector3 input = new Vector3
         {
             x = 0f,//-Input.GetAxis("Vertical") * StationaryY, /***横の入力情報***/
-            y = 0f,   /***縦の入力情報***/
-            z = Input.GetAxis("Horizontal") * StationaryZ
+			y = Input.GetAxis("Horizontal") * StationaryZ,   /***縦の入力情報***/
+//            z = Input.GetAxis("Horizontal") * StationaryZ
+			z = 0f
         };
 
         return input;

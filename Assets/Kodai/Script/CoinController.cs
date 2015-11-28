@@ -4,12 +4,12 @@ using System.Collections;
 public class CoinController : MonoBehaviour {
 
 	GameObject player;
-	DebugPlayerController script;
+	PlayerController2 script;
 
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find("Player");
-		script = player.GetComponent<DebugPlayerController>();
+		script = player.GetComponent<PlayerController2>();
 	}
 	
 	// Update is called once per frame
