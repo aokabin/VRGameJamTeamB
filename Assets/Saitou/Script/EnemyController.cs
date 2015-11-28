@@ -8,7 +8,7 @@ public class EnemyController : MonoBehaviour {
         Walk,
         Atk
     };
-
+    public int EnemyHP = 30;//敵の体力
     public float EnemyMoveSpeed = 0.5f;//敵の動く速さ
     public float EnemyMoveDistance = 60;//敵の動ける範囲
 
@@ -53,7 +53,12 @@ public class EnemyController : MonoBehaviour {
     }
     void OnTriggerStay(Collider col)
     {
-        if (col.gameObject.CompareTag("Target")) 
+        if (col.gameObject.CompareTag("Target"))
             Action = ActionID.None;
+    }
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.CompareTag("Bullet"))
+            EnemyHP--;
     }
 }
